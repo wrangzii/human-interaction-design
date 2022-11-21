@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css">
+    <title>History</title>
+    <script src="https://kit.fontawesome.com/6f560add72.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#header").load("../components/header.html");
+            $("#sidebar").load("../components/sidebar.html");
+            $("#footer").load("../components/footer.html");
+            $("#startCounter").load("../components/startCounter.html");
+            $.getScript("../assets/scripts/index.js")
+            $.getScript("../assets/scripts/dashboard/runTimer.js")
+            $.getScript("../assets/scripts/history/collapse.js")
+        })
+    </script>
+</head>
+
+<body>
+    <div class="history">
+        <div class="iphone">
+            <!-- HEADER -->
+            <header id="header" class="header"></header>
+
+            <!-- SIDEBAR -->
+            <aside id="sidebar"></aside>
+
+            <div class="container">
+                <!-- TRACKING FILTER -->
+                <div class="filter">
+                    <i class="fa-solid fa-filter"></i>
+                    <button>Choose time</button>
+                </div>
+
+                <!-- TRACKING HISTORY -->
+                <div class="collapse">
+                    <div class="collapse-month">
+                        <h6>October 2022</h6>
+                        <span class="duration">01:32:31</span>
+                        <span class="distance">0 km</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <ul class="detail">
+                        <li>
+                            <h6>27 Oct 2022</h6>
+                            <span class="detail-duration">00:49:24</span>
+                            <span class="detail-distance">0 km</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </li>
+                        <li>
+                            <div class="detail-children">
+                                <div class="heading">
+                                    <i class="fa-solid fa-person-skiing"></i>
+                                    <h6>27 Oct 2022 at 10:37:59 AM</h6>
+                                </div>
+                                <div class="table">
+                                    <table>
+                                        <th></th>
+                                        <th>TIME</th>
+                                        <th>DISTANCE</th>
+                                        <th>VERTICAL</th>
+                                        <tr>
+                                            <td>
+                                                <i class="fa-solid fa-arrow-up"></i>
+                                                11 m
+                                            </td>
+                                            <td>
+                                                <i class="fa-solid fa-person-skiing"></i>
+                                                00:00:00
+                                            </td>
+                                            <td>0 km</td>
+                                            <td>
+                                                <i class="fa-solid fa-arrow-up"></i>
+                                                0 m
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa-solid fa-arrow-down"></i>
+                                                11 m
+                                            </td>
+                                            <td>
+                                                <i class="fa-solid fa-person-skiing"
+                                                    style="transform: rotate(-45deg);"></i>
+                                                00:00:00
+                                            </td>
+                                            <td>0 km</td>
+                                            <td>
+                                                <i class="fa-solid fa-arrow-down"></i>
+                                                0 m
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>MAX SPEED</th>
+                                            <th>RUNS</th>
+                                            <th>LIFT</th>
+                                            <th>SLOPE</th>
+                                        </tr>
+                                        <tr>
+                                            <td>0 km/h</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0°</td>
+                                        </tr>
+                                    </table>
+                                    <div class="action">
+                                        <i class="fa-solid fa-share-nodes"></i>
+                                        <i class="fa-solid fa-map-location-dot"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h6>26 Oct 2022</h6>
+                            <span class="detail-duration">00:41:55</span>
+                            <span class="detail-distance">0 km</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </li>
+                        <li>
+                            <div class="detail-children">
+                                <div class="heading">
+                                    <i class="fa-solid fa-person-skiing"></i>
+                                    <h6>27 Oct 2022 at 10:37:59 AM</h6>
+                                </div>
+                                <div class="table">
+                                    <table>
+                                        <th></th>
+                                        <th>TIME</th>
+                                        <th>DISTANCE</th>
+                                        <th>VERTICAL</th>
+                                        <tr>
+                                            <td>
+                                                <i class="fa-solid fa-arrow-up"></i>
+                                                11 m
+                                            </td>
+                                            <td>
+                                                <i class="fa-solid fa-person-skiing"></i>
+                                                00:00:00
+                                            </td>
+                                            <td>0 km</td>
+                                            <td>
+                                                <i class="fa-solid fa-arrow-up"></i>
+                                                0 m
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa-solid fa-arrow-down"></i>
+                                                11 m
+                                            </td>
+                                            <td>
+                                                <i class="fa-solid fa-person-skiing"
+                                                    style="transform: rotate(-45deg);"></i>
+                                                00:00:00
+                                            </td>
+                                            <td>0 km</td>
+                                            <td>
+                                                <i class="fa-solid fa-arrow-down"></i>
+                                                0 m
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>MAX SPEED</th>
+                                            <th>RUNS</th>
+                                            <th>LIFT</th>
+                                            <th>SLOPE</th>
+                                        </tr>
+                                        <tr>
+                                            <td>0 km/h</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0°</td>
+                                        </tr>
+                                    </table>
+                                    <div class="action">
+                                        <i class="fa-solid fa-share-nodes"></i>
+                                        <i class="fa-solid fa-map-location-dot"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h6>25 Oct 2022</h6>
+                            <span class="detail-duration">00:01:11</span>
+                            <span class="detail-distance">0 km</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </li>
+                        <li>
+                            <div class="detail-children">
+                                <div class="heading">
+                                    <i class="fa-solid fa-person-skiing"></i>
+                                    <h6>27 Oct 2022 at 10:37:59 AM</h6>
+                                </div>
+                                <div class="table">
+                                    <table>
+                                        <th></th>
+                                        <th>TIME</th>
+                                        <th>DISTANCE</th>
+                                        <th>VERTICAL</th>
+                                        <tr>
+                                            <td>
+                                                <i class="fa-solid fa-arrow-up"></i>
+                                                11 m
+                                            </td>
+                                            <td>
+                                                <i class="fa-solid fa-person-skiing"></i>
+                                                00:00:00
+                                            </td>
+                                            <td>0 km</td>
+                                            <td>
+                                                <i class="fa-solid fa-arrow-up"></i>
+                                                0 m
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <i class="fa-solid fa-arrow-down"></i>
+                                                11 m
+                                            </td>
+                                            <td>
+                                                <i class="fa-solid fa-person-skiing"
+                                                    style="transform: rotate(-45deg);"></i>
+                                                00:00:00
+                                            </td>
+                                            <td>0 km</td>
+                                            <td>
+                                                <i class="fa-solid fa-arrow-down"></i>
+                                                0 m
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>MAX SPEED</th>
+                                            <th>RUNS</th>
+                                            <th>LIFT</th>
+                                            <th>SLOPE</th>
+                                        </tr>
+                                        <tr>
+                                            <td>0 km/h</td>
+                                            <td>0</td>
+                                            <td>0</td>
+                                            <td>0°</td>
+                                        </tr>
+                                    </table>
+                                    <div class="action">
+                                        <i class="fa-solid fa-share-nodes"></i>
+                                        <i class="fa-solid fa-map-location-dot"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <footer id="footer" class="navigation"></footer>
+
+            <!-- START COUNTER -->
+            <div id="startCounter"></div>
+        </div>
+    </div>
+</body>
+
+</html>

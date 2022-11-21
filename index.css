@@ -1,0 +1,786 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: sans-serif;
+}
+
+:root {
+  --primary: #e12640;
+  --width: 308px;
+  --border-sm: 10px;
+}
+
+body,
+html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem;
+}
+input:focus-visible {
+  outline: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.iphone {
+  width: 345px;
+  max-width: 345px;
+  min-width: 345px;
+  height: 745px;
+  max-height: 745px;
+  border-radius: 50px;
+  background: url(../../human-interaction-design/assets/images/iphone11.png), url(../../human-interaction-design/assets/images/home.png);
+  background-size: 350px 745px, 95% 95%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+.ski-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  position: absolute;
+  bottom: 9.5rem;
+  left: 1.9rem;
+}
+.ski-icon img {
+  border-radius: 0.7rem;
+  width: 52px;
+  height: 52px;
+}
+.ski-icon span {
+  color: #fff;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.header {
+  position: absolute;
+  top: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary);
+  width: var(--width);
+  color: #fff;
+  border-radius: 30px 30px 0 0;
+}
+.header .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+  padding: 1.8rem 1rem;
+}
+.header .content i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.header .content h2 {
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navigation {
+  position: absolute;
+  top: 39.8rem;
+  left: 50%;
+  transform: translate(-50%);
+  color: #fff;
+  width: 308px;
+  padding-block: 5px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: var(--primary);
+}
+.navigation ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.58rem;
+}
+.navigation ul a {
+  flex: 1;
+}
+.navigation ul a li {
+  padding: 0.5rem;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: center;
+  cursor: pointer;
+  opacity: 0.6;
+}
+.navigation ul a li.active {
+  opacity: 1;
+}
+.navigation ul a li p {
+  font-size: 12px;
+}
+
+button.start-counter {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100rem;
+  border: none;
+  position: absolute;
+  top: 4rem;
+  right: 2rem;
+  z-index: 2;
+  box-shadow: 2px 2px 5px #000;
+  cursor: pointer;
+  transition: all 0.25s linear;
+}
+button.start-counter:hover {
+  opacity: 0.8;
+}
+button.start-counter i {
+  font-size: 2rem;
+}
+
+.minor {
+  position: absolute;
+  right: 1rem;
+  top: 4.5rem;
+}
+.minor button {
+  border: none;
+  background-color: transparent;
+  font-size: 25px;
+  cursor: pointer;
+  padding-inline: 0.8rem;
+  color: #fff;
+  display: none;
+}
+
+.dashboard .iphone {
+  background-color: #eee;
+  background-image: url(../../human-interaction-design/assets/images/iphone11.png);
+  position: relative;
+}
+.dashboard .iphone .datetime {
+  width: var(--width);
+  position: absolute;
+  top: 6.5rem;
+  left: 50%;
+  transform: translate(-50%);
+}
+.dashboard .iphone .datetime-text {
+  background-color: #fff;
+  padding: 0.5rem;
+  margin: 0 1%;
+}
+.dashboard .iphone .data ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 310px;
+  position: absolute;
+  top: 8.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.dashboard .iphone .data ul li {
+  margin: 1%;
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.dashboard .iphone .data ul li h5 {
+  font-size: 17px;
+}
+.dashboard .iphone .data ul li > p {
+  font-size: 22px;
+  font-weight: bold;
+  color: #7f7f7f;
+  padding-block: 1.5rem;
+}
+.dashboard .iphone .data ul li .detail {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  gap: 3px;
+}
+.dashboard .iphone .data ul li .detail .row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.dashboard .iphone .fast-ride {
+  width: 305px;
+  position: absolute;
+  top: 28.88rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+}
+.dashboard .iphone .fast-ride h3 {
+  color: red;
+  text-align: center;
+  padding-block: 0.5rem;
+}
+.dashboard .iphone .fast-ride ul {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+.dashboard .iphone .fast-ride ul li {
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.dashboard .iphone .fast-ride ul li > p {
+  color: #7f7f7f;
+  font-size: 22px;
+  font-weight: bold;
+}
+.dashboard .iphone .fast-ride ul li .detail {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.dashboard .iphone .coordinator {
+  width: 305px;
+  position: absolute;
+  top: 37.9rem;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #fff;
+  padding-block: 5px;
+}
+.dashboard .iphone .coordinator p {
+  font-size: 12px;
+}
+.dashboard .iphone .overlay {
+  width: 310px;
+  height: 95%;
+  display: block;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: auto;
+  position: fixed;
+  z-index: 4;
+  inset: 0;
+  display: none;
+}
+.dashboard .iphone .overlay .modal {
+  width: 90%;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  padding-top: 1rem;
+}
+.dashboard .iphone .overlay .modal-header {
+  font-weight: 700;
+  font-size: 15px;
+}
+.dashboard .iphone .overlay .modal-content {
+  text-align: center;
+  font-size: 13px;
+}
+.dashboard .iphone .overlay .modal-action {
+  border-top: 1px solid #ccc;
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.dashboard .iphone .overlay .modal-action button {
+  color: #02a7f0;
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  padding: 1rem;
+  cursor: pointer;
+}
+.dashboard .iphone .overlay .modal-action button:first-child {
+  border-right: 1px solid #ccc;
+}
+.dashboard .iphone button.start-counter-fire {
+  border-radius: 100rem;
+  border: none;
+  position: absolute;
+  right: 2rem;
+  bottom: 14rem;
+  z-index: 4;
+  box-shadow: 2px 2px 5px red;
+  cursor: pointer;
+  transition: all 0.25s linear;
+}
+.dashboard .iphone button.start-counter-fire:hover {
+  opacity: 0.8;
+}
+.dashboard .iphone button.start-counter-fire img {
+  border-radius: 100rem;
+  width: 50px;
+}
+
+.map .iphone {
+  background-color: #eee;
+  background-image: url(../../human-interaction-design/assets/images/iphone11.png);
+  position: relative;
+}
+.map .iphone .container {
+  width: var(--width);
+  height: 615px;
+  margin: auto;
+}
+.map .iphone .container iframe {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  margin-top: 20px;
+}
+
+.history .iphone {
+  background-color: #eee;
+  background-image: url(../../human-interaction-design/assets/images/iphone11.png);
+  position: relative;
+}
+.history .iphone .container {
+  width: var(--width);
+  height: 615px;
+  margin: auto;
+}
+.history .iphone .container i {
+  color: var(--primary);
+  cursor: pointer;
+}
+.history .iphone .container .filter {
+  background-color: #fff;
+  position: absolute;
+  top: 6.5rem;
+  width: var(--width);
+  padding: 0.5rem 1rem;
+}
+.history .iphone .container .filter button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 15px;
+  color: var(--primary);
+}
+.history .iphone .container .collapse {
+  background-color: #fff;
+  position: absolute;
+  top: 9rem;
+  z-index: 3;
+  width: var(--width);
+  height: 490px;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  justify-content: start;
+  flex-direction: column;
+  gap: 0;
+  user-select: none;
+}
+.history .iphone .container .collapse::-webkit-scrollbar {
+  display: none;
+}
+.history .iphone .container .collapse {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.history .iphone .container .collapse-month {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 0.5fr;
+  align-items: center;
+  background-color: var(--primary);
+  position: sticky;
+  top: 0;
+}
+.history .iphone .container .collapse-month h6,
+.history .iphone .container .collapse-month span,
+.history .iphone .container .collapse-month i {
+  color: #fff;
+  padding: 0.5rem;
+}
+.history .iphone .container .collapse ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+.history .iphone .container .collapse ul li:nth-child(odd) {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 0.5fr;
+  align-items: center;
+}
+.history .iphone .container .collapse ul li:nth-child(odd):not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+.history .iphone .container .collapse ul li:nth-child(even) .detail-children {
+  width: 100%;
+  background-color: #eee;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+.history .iphone .container .collapse ul li:nth-child(even) .detail-children .heading {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 5px;
+}
+.history .iphone .container .collapse ul li:nth-child(even) .detail-children .table {
+  display: grid;
+  grid-template-columns: 8fr 1fr;
+}
+.history .iphone .container .collapse ul li:nth-child(even) .detail-children .table table tr {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+  width: 100%;
+}
+.history .iphone .container .collapse ul li:nth-child(even) .detail-children .table table tr th,
+.history .iphone .container .collapse ul li:nth-child(even) .detail-children .table table tr td {
+  font-size: 10px;
+  font-weight: normal;
+  padding-block: 5px;
+  text-align: center;
+}
+.history .iphone .container .collapse ul li:nth-child(even) .detail-children .table table tr th {
+  font-weight: 600;
+}
+.history .iphone .container .collapse ul li:nth-child(even) .detail-children .table .action {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.history .iphone .container h6 {
+  font-size: 15px;
+  font-weight: bold;
+}
+.history .iphone .container span {
+  font-size: 12px;
+  text-align: center;
+}
+.history .iphone .container i {
+  text-align: right;
+}
+
+.forecast .iphone {
+  background-color: #eee;
+  background-image: url(../../human-interaction-design/assets/images/iphone11.png);
+  position: relative;
+}
+.forecast .iphone .container {
+  width: var(--width);
+  height: 100%;
+  margin: auto;
+}
+.forecast .iphone .container .location {
+  position: absolute;
+  top: 6.5rem;
+  left: 20px;
+  width: 307px;
+  background: #fff;
+  padding: 0.5rem 1rem;
+}
+.forecast .iphone .container .location h2 {
+  font-size: 15px;
+  font-weight: normal;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.forecast .iphone .container .location-dropdown {
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: #fff;
+  box-shadow: 2px 2px 5px #000;
+  position: absolute;
+  z-index: 5;
+}
+.forecast .iphone .container .location-dropdown .search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.25s linear;
+}
+.forecast .iphone .container .location-dropdown .search:focus-within {
+  border: 1px solid #000;
+}
+.forecast .iphone .container .location-dropdown .search input {
+  border-right: 1px solid #ccc;
+  flex: 2;
+}
+.forecast .iphone .container .location-dropdown .search i {
+  padding: 0.5rem;
+  color: #000;
+  border-radius: var(--border-sm);
+  color: var(--primary);
+}
+.forecast .iphone .container .location-dropdown .options {
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+.forecast .iphone .container .location-dropdown .options p {
+  font-size: 15px;
+  line-height: 1.6;
+  padding-inline: 1rem;
+}
+.forecast .iphone .container .location-dropdown .options p:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+.forecast .iphone .container .location .datetime-picker {
+  color: #fff;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+.forecast .iphone .container .location .datetime-picker > div {
+  cursor: pointer;
+  padding: 0.5rem;
+  background-color: var(--primary);
+  border-radius: var(--border-sm);
+  width: fit-content;
+}
+.forecast .iphone .container .location ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 440px;
+  padding-block: 0.5rem;
+  overflow-y: scroll;
+}
+.forecast .iphone .container .location ul::-webkit-scrollbar {
+  display: none;
+}
+.forecast .iphone .container .location ul {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.forecast .iphone .container .location ul li.city {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eee;
+  padding: 0.5rem;
+  border-radius: var(--border-sm);
+  cursor: pointer;
+}
+.forecast .iphone .container .location ul li.city .left h4 {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.forecast .iphone .container .location ul li.city .left h4 span {
+  color: #fff;
+  font-size: 10px;
+  background-color: var(--primary);
+  padding: 5px;
+  border-radius: 5px;
+}
+.forecast .iphone .container .location ul li.city .left p {
+  line-height: 3;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.forecast .iphone .container .location ul li.city .right {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.forecast .iphone .container .location ul li.city .right i {
+  color: var(--primary);
+}
+
+.login .iphone {
+  background-color: var(--primary);
+  background-image: url(../../human-interaction-design/assets/images/iphone11.png);
+  position: relative;
+}
+.login .iphone .container {
+  width: var(--width);
+  height: 100%;
+  margin: auto;
+}
+.login .iphone .container .login {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  width: 80%;
+}
+.login .iphone .container .login form {
+  background-color: #fff;
+  border-radius: var(--border-sm);
+  padding: 1rem;
+}
+.login .iphone .container .login form .top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.login .iphone .container .login form .top input {
+  border-radius: 5px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+}
+.login .iphone .container .login form .top a {
+  background-color: var(--primary);
+  border-radius: 5px;
+  display: inline-block;
+  padding: 0.2rem;
+  text-align: center;
+}
+.login .iphone .container .sign-up {
+  position: absolute;
+  bottom: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  text-align: center;
+}
+.login .iphone .container .sign-up .social-media {
+  border-radius: 10px;
+  background-color: #eee;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding-block: 1rem;
+}
+.login .iphone .container .sign-up .social-media i {
+  cursor: pointer;
+  font-size: 20px;
+}
+.login .iphone .container h5 {
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+  padding: 1rem;
+}
+
+.sidebar {
+  background-color: var(--primary);
+  position: absolute;
+  left: 18px;
+  top: 20px;
+  z-index: 5;
+  border-radius: 30px;
+  height: 705px;
+  width: 310px;
+}
+.sidebar .close {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  color: #fff;
+}
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 5rem;
+  padding-left: 1rem;
+}
+.sidebar ul a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+  font-size: 20px;
+}
+.sidebar ul a:not(:last-child) {
+  padding-left: 0.8rem;
+}
+.sidebar ul a:last-child {
+  background-color: red;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-sm);
+  margin-right: 1rem;
+}
+.sidebar ul a i {
+  width: 18px;
+}
+.sidebar .sos button {
+  border: 1px solid #FFF;
+  border-radius: 100rem;
+  width: 100px;
+  height: 100px;
+  font-size: 20px;
+  color: crimson;
+  background-color: #FFF;
+  box-shadow: 0 0 10px 5px crimson;
+  margin: 1.5rem auto;
+  display: block;
+  cursor: pointer;
+}
+.sidebar .sos h5 {
+  color: #FFF;
+  font-size: 15px;
+  text-align: center;
+}
+.sidebar .sos ul {
+  margin-top: 0.5rem;
+  margin-inline: auto;
+  width: 90%;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  gap: 1rem;
+}
+.sidebar .sos ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 3px solid crimson;
+  padding-left: 0.5rem;
+  cursor: pointer;
+}
+.sidebar .sos ul li i {
+  color: crimson;
+}
+
+/*# sourceMappingURL=index.css.map */

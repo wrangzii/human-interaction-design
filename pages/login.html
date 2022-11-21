@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css">
+    <title>Log in</title>
+    <script src="https://kit.fontawesome.com/6f560add72.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $.getScript("../assets/scripts/index.js")
+        })
+    </script>
+</head>
+
+<body>
+    <div class="login">
+        <div class="iphone">
+            <div class="container">
+                <div class="login">
+                    <h5>Login</h5>
+                    <form>
+                        <div class="top">
+                            <label for="uname"><b>Username</b></label>
+                            <input type="text" placeholder="Enter Username" name="uname" required>
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
+                            <a href="./dashboard.html">Login</a>
+                            <label>
+                                <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="sign-up">
+                    <h5>Sign up</h5>
+                    <div class="social-media">
+                        <i class="fa-brands fa-apple"></i>
+                        <i class="fa-brands fa-google"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

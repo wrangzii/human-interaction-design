@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css">
+    <title>Forecast</title>
+    <script src="https://kit.fontawesome.com/6f560add72.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#header").load("../components/header.html");
+            $("#sidebar").load("../components/sidebar.html");
+            $("#footer").load("../components/footer.html");
+            $("#startCounter").load("../components/startCounter.html");
+            $.getScript("../assets/scripts/index.js")
+            $.getScript("../assets/scripts/dashboard/runTimer.js")
+            $.getScript("../assets/scripts/forecast/toggle.js")
+        })
+    </script>
+</head>
+
+<body>
+    <div class="forecast">
+        <div class="iphone">
+            <!-- HEADER -->
+            <header id="header" class="header"></header>
+
+            <!-- SIDEBAR -->
+            <aside id="sidebar"></aside>
+
+            <div class="container">
+                <div class="location">
+                    <h2>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Scotland, UK
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </h2>
+                    <div class="location-dropdown d-none">
+                        <div class="search">
+                            <input type="search" name="location-search" id="location-search">
+                            <i class="fa-solid fa-magnifying-glass-location"></i>
+                        </div>
+                        <div class="options">
+                            <p>Snowdon, UK</p>
+                            <p>Ben nevis, UK</p>
+                            <p>Helvellyn, UK</p>
+                            <p>Slieve Donard, UK</p>
+                            <p>Catbells, UK</p>
+                        </div>
+                    </div>
+                    <div class="datetime-picker">
+                        <div class="date">
+                            <i class="fa-regular fa-calendar"></i>
+                            <span>29 Nov 2022</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="time">
+                            <i class="fa-regular fa-clock"></i>
+                            <span>4:20 PM</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <ul>
+                        <li class="city">
+                            <div class="left">
+                                <h4>Stirling <span>Scotland</span></h4>
+                                <p>few clouds</p>
+                            </div>
+                            <div class="right">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                                <p class="temp">21°</p>
+                            </div>
+                        </li>
+                        <li class="city">
+                            <div class="left">
+                                <h4>Aberdeen <span>Scotland</span></h4>
+                                <p>light rain</p>
+                            </div>
+                            <div class="right">
+                                <i class="fa-solid fa-cloud-bolt"></i>
+                                <p class="temp">15°</p>
+                            </div>
+                        </li>
+                        <li class="city">
+                            <div class="left">
+                                <h4>Dundee <span>Scotland</span></h4>
+                                <p>overcast clouds</p>
+                            </div>
+                            <div class="right">
+                                <i class="fa-solid fa-cloud-sun"></i>
+                                <p class="temp">19°</p>
+                            </div>
+                        </li>
+                        <li class="city">
+                            <div class="left">
+                                <h4>Dunfermline <span>Scotland</span></h4>
+                                <p>few clouds</p>
+                            </div>
+                            <div class="right">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                                <p class="temp">17°</p>
+                            </div>
+                        </li>
+                        <li class="city">
+                            <div class="left">
+                                <h4>Edinburgh <span>Scotland</span></h4>
+                                <p>light rain</p>
+                            </div>
+                            <div class="right">
+                                <i class="fa-solid fa-cloud-bolt"></i>
+                                <p class="temp">21°</p>
+                            </div>
+                        </li>
+                        <li class="city">
+                            <div class="left">
+                                <h4>Glasgow <span>Scotland</span></h4>
+                                <p>overcast clouds</p>
+                            </div>
+                            <div class="right">
+                                <i class="fa-solid fa-cloud-sun"></i>
+                                <p class="temp">20°</p>
+                            </div>
+                        </li>
+                        <li class="city">
+                            <div class="left">
+                                <h4>Inverness <span>Scotland</span></h4>
+                                <p>few clouds</p>
+                            </div>
+                            <div class="right">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                                <p class="temp">13°</p>
+                            </div>
+                        </li>
+                        <li class="city">
+                            <div class="left">
+                                <h4>Perth <span>Scotland</span></h4>
+                                <p>light rain</p>
+                            </div>
+                            <div class="right">
+                                <i class="fa-solid fa-cloud-bolt"></i>
+                                <p class="temp">15°</p>
+                            </div>
+                        </li>
+                        <li class="city">
+                            <div class="left">
+                                <h4>Stirling <span>Scotland</span></h4>
+                                <p>overcast clouds</p>
+                            </div>
+                            <div class="right">
+                                <i class="fa-solid fa-cloud-sun"></i>
+                                <p class="temp">14°</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- FOOTER -->
+            <footer id="footer" class="navigation"></footer>
+
+            <!-- START COUNTER -->
+            <div id="startCounter"></div>
+        </div>
+    </div>
+</body>
+
+</html>

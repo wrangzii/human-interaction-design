@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: sans-serif;
+}
+
+:root {
+  --primary: #02a7f0;
+  --width: 308px;
+  --border-sm: 10px;
+}
+
+body,
+html {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem;
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.iphone {
+  width: 345px;
+  max-width: 345px;
+  min-width: 345px;
+  height: 745px;
+  max-height: 745px;
+  border-radius: 50px;
+
+  background: url(../../human-interaction-design/assets/images/iphone11.png), url(../../human-interaction-design/assets/images/home.png);
+  background-size: 350px 745px, 95% 95%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: relative;
+}
+
+.ski-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+
+  position: absolute;
+  bottom: 9.5rem;
+  left: 1.9rem;
+
+  img {
+    border-radius: 0.7rem;
+    width: 52px;
+    height: 52px;
+  }
+
+  span {
+    color: #fff;
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
+
+@import "./header.scss";
+@import "./footer.scss";
+@import "./startCounter.scss";
+@import "./dashboard.scss";
+@import "./map.scss";
+@import "./history.scss";
+@import "./forecast.scss";
+@import "./login.scss";
+@import "./sidebar.scss";

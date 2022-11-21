@@ -1,0 +1,158 @@
+.forecast {
+  .iphone {
+    background-color: #eee;
+    background-image: url(../../human-interaction-design/assets/images/iphone11.png);
+    position: relative;
+
+    .container {
+      width: var(--width);
+      height: 100%;
+      margin: auto;
+
+      .location {
+        position: absolute;
+        top: 6.5rem;
+        left: 20px;
+        width: 307px;
+        background: #fff;
+        padding: 0.5rem 1rem;
+
+        h2 {
+          font-size: 15px;
+          font-weight: normal;
+          color: var(--primary);
+          margin-bottom: 0.5rem;
+          cursor: pointer;
+        }
+
+        &-dropdown {
+          border-radius: 5px;
+          padding: 0.5rem;
+          background-color: #fff;
+          box-shadow: 2px 2px 5px #000;
+          position: absolute;
+          z-index: 5;
+
+          .search {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all .25s linear;
+
+            &:focus-within {
+              border: 1px solid #000;
+            }
+
+            input {
+              border-right: 1px solid #ccc;
+              flex: 2;
+            }
+
+            i {
+              padding: 0.5rem;
+              color: #000;
+              border-radius: var(--border-sm);
+              color: var(--primary);
+            }
+          }
+
+          .options {
+            margin-top: .5rem;
+            cursor: pointer;
+            
+            p {
+              font-size: 15px;
+              line-height: 1.6;
+              padding-inline: 1rem;
+              
+              &:not(:last-child) {
+                border-bottom: 1px solid #ccc;
+              }
+            }
+          }
+        }
+
+        .datetime-picker {
+          color: #fff;
+          font-size: 15px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-bottom: 1rem;
+
+          & > div {
+            cursor: pointer;
+            padding: 0.5rem;
+            background-color: var(--primary);
+            border-radius: var(--border-sm);
+            width: fit-content;
+          }
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          max-height: 440px;
+          padding-block: 0.5rem;
+          overflow-y: scroll;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
+          & {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+          }
+
+          li.city {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #eee;
+            padding: 0.5rem;
+            border-radius: var(--border-sm);
+            cursor: pointer;
+
+            .left {
+              h4 {
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+
+                span {
+                  color: #fff;
+                  font-size: 10px;
+                  background-color: var(--primary);
+                  padding: 5px;
+                  border-radius: 5px;
+                }
+              }
+
+              p {
+                line-height: 3;
+                font-size: 10px;
+                color: rgba($color: #000000, $alpha: 0.5);
+                font-weight: 600;
+                text-transform: uppercase;
+              }
+            }
+            .right {
+              display: flex;
+              gap: 0.5rem;
+              align-items: center;
+              i {
+                color: var(--primary);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

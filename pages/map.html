@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../index.css">
+    <title>Map</title>
+    <script src="https://kit.fontawesome.com/6f560add72.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("#header").load("../components/header.html");
+            $("#sidebar").load("../components/sidebar.html");
+            $("#footer").load("../components/footer.html");
+            $("#startCounter").load("../components/startCounter.html");
+            $.getScript("../assets/scripts/index.js")
+            $.getScript("../assets/scripts/dashboard/runTimer.js")
+        })
+    </script>
+</head>
+
+<body>
+    <div class="map">
+        <div class="iphone">
+            <!-- HEADER -->
+            <header id="header" class="header"></header>
+
+            <!-- SIDEBAR -->
+            <aside id="sidebar"></aside>
+
+            <div class="container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d188151.72378847253!2d1.4620772453953697!3d42.53680164241712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1667010549301!5m2!1svi!2s"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+            <!-- FOOTER -->
+            <footer id="footer" class="navigation"></footer>
+
+            <!-- START COUNTER -->
+            <div id="startCounter"></div>
+        </div>
+    </div>
+</body>
+
+</html>

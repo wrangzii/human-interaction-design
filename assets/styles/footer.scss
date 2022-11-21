@@ -1,0 +1,41 @@
+.navigation {
+  position: absolute;
+  top: 39.8rem;
+  left: 50%;
+  transform: translate(-50%);
+  color: #fff;
+  width: 308px;
+  padding-block: 5px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: var(--primary);
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.58rem;
+
+    a {
+      flex: 1;
+
+      li {
+      padding: 0.5rem;
+      font-size: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      text-align: center;
+      cursor: pointer;
+      opacity: 0.6;
+
+      &.active {
+        opacity: 1;
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
+    }
+  }
+}

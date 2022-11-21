@@ -1,0 +1,156 @@
+.history {
+  .iphone {
+    background-color: #eee;
+    background-image: url(../../human-interaction-design/assets/images/iphone11.png);
+    position: relative;
+
+    .container {
+      width: var(--width);
+      height: 615px;
+      margin: auto;
+
+      i {
+        color: var(--primary);
+        cursor: pointer;
+      }
+
+      @mixin flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 0.5rem;
+      }
+
+      @mixin grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 0.5fr;
+      }
+
+      .filter {
+        background-color: #fff;
+        position: absolute;
+        top: 6.5rem;
+        width: var(--width);
+        padding: 0.5rem 1rem;
+
+        button {
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+          font-size: 15px;
+          color: var(--primary);
+        }
+      }
+
+      .collapse {
+        background-color: #fff;
+        position: absolute;
+        top: 9rem;
+        z-index: 3;
+        width: var(--width);
+        height: 490px;
+        overflow-y: scroll;
+        @include flex();
+        justify-content: start;
+        flex-direction: column;
+        gap: 0;
+        user-select: none;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+        & {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+
+        &-month {
+          @include grid();
+          align-items: center;
+          background-color: var(--primary);
+          position: sticky;
+          top: 0;
+
+          h6,
+          span,
+          i {
+            color: #fff;
+            padding: 0.5rem;
+          }
+        }
+
+        ul {
+          @include flex();
+          flex-direction: column;
+          padding: 0.5rem;
+
+          li:nth-child(odd) {
+            @include grid();
+            align-items: center;
+
+            &:not(:last-child) {
+              border-bottom: 1px solid #eee;
+            }
+          }
+
+          li:nth-child(even) {
+            .detail-children {
+              width: 100%;
+              background-color: #eee;
+              padding: 0.5rem;
+              border-radius: 5px;
+
+              .heading {
+                display: flex;
+                gap: 1rem;
+                margin-bottom: 5px;
+              }
+
+              .table {
+                display: grid;
+                grid-template-columns: 8fr 1fr;
+
+                table {
+                  tr {
+                    display: grid;
+                    grid-template-columns: 1.3fr 1fr 1fr 1fr;
+                    width: 100%;
+                    th,
+                    td {
+                      font-size: 10px;
+                      font-weight: normal;
+                      padding-block: 5px;
+                      text-align: center;
+                    }
+
+                    th {
+                      font-weight: 600;
+                    }
+                  }
+                }
+                .action {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                }
+              }
+            }
+          }
+        }
+      }
+      h6 {
+        font-size: 15px;
+        font-weight: bold;
+      }
+
+      span {
+        font-size: 12px;
+        text-align: center;
+      }
+
+      i {
+        text-align: right;
+      }
+    }
+  }
+}

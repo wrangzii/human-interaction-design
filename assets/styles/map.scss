@@ -1,0 +1,21 @@
+.map {
+  .iphone {
+    background-color: #eee;
+    background-image: url(../../human-interaction-design/assets/images/iphone11.png);
+    position: relative;
+
+    .container {
+      width: var(--width);
+      height: 615px;
+      margin: auto;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: 30px;
+        border-top-left-radius: 30px;
+        margin-top: 20px;
+      }
+    }
+  }
+}
